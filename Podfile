@@ -6,6 +6,6 @@ target 'PokeFinder' do
   use_frameworks!
 
   # Pods for PokeFinder
-  pod 'Firebase/Core'
+  pod 'Firebase'
   pod 'Firebase/Database'
 end
