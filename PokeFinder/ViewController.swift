@@ -121,9 +121,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+
     @IBAction func spotRandomPokemon(_ sender: UIButton) {
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        let rand = arc4random_uniform(151) + 1
+        let rand = arc4random_uniform(718) + 1
         createSighting(forLocation: loc, withPokemon: Int(rand))
     }
 }
