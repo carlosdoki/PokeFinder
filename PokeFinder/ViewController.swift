@@ -9,10 +9,12 @@
 import UIKit
 import MapKit
 import FirebaseDatabase
+import GoogleMobileAds
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var bannerView: GADBannerView!
 
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
@@ -22,6 +24,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        bannerView.adUnitID = "ca-app-pub-1468309003365349/2524552116"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
         
