@@ -8,4 +8,5 @@ target 'PokeFinder' do
   # Pods for PokeFinder
   pod 'Firebase'
   pod 'Firebase/Database'
+  pod 'Firebase/AdMob'
 end
