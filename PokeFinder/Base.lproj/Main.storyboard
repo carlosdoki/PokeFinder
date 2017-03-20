@@ -25,8 +25,15 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gVy-6b-uko">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-XS-KLt" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kbt-mV-DFs"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn6-WU-QHf">
-                                <rect key="frame" x="16" y="603" width="54" height="54"/>
+                                <rect key="frame" x="16" y="555" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="MBG-bf-ERv"/>
                                     <constraint firstAttribute="height" constant="54" id="WY1-pa-KuB"/>
@@ -36,21 +43,14 @@
                                     <action selector="spotRandomPokemon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DrI-WU-yJB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-XS-KLt" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kbt-mV-DFs"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gVy-6b-uko" secondAttribute="trailing" id="71k-oH-cdD"/>
-                            <constraint firstItem="ovE-XS-KLt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OXq-yL-pKh"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wn6-WU-QHf" secondAttribute="bottom" constant="10" id="PAf-4c-OhZ"/>
                             <constraint firstItem="ovE-XS-KLt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QkO-dU-kbb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ovE-XS-KLt" secondAttribute="bottom" id="Sr5-JA-cOw"/>
                             <constraint firstItem="gVy-6b-uko" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xyt-p1-PjJ"/>
+                            <constraint firstItem="ovE-XS-KLt" firstAttribute="top" secondItem="Wn6-WU-QHf" secondAttribute="bottom" constant="8" id="c3w-3a-6Gx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gVy-6b-uko" secondAttribute="bottom" id="c6S-B8-2tq"/>
                             <constraint firstAttribute="trailing" secondItem="ovE-XS-KLt" secondAttribute="trailing" id="ghl-kA-px6"/>
                             <constraint firstItem="Wn6-WU-QHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pB9-KG-Kz8"/>

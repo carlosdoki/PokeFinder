@@ -54,7 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coodinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
+        let coodinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         
         mapView.setRegion(coodinateRegion, animated: true)
     }
@@ -87,6 +87,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         if let annotationView = annotationView, let anno = annotation as? PokeAnnotation {
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "\(anno.pokemonNumber)")
+            annotationView.contentMode = .scaleAspectFill
+            annotationView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named: "map"), for: .normal)
